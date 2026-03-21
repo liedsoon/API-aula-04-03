@@ -1,0 +1,79 @@
+body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+    }
+
+    header, nav, main, footer {
+        padding: 10px;
+    }
+
+    header figure {
+        text-align: center;
+    }
+
+    header img {
+        width: 250px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    img, video {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    form {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    fieldset {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input, textarea, button {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 5px;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    * {
+        max-width: 100%;
+    }
+
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+    }
+
+    nav a {
+        text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+    }

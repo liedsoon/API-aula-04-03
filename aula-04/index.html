@@ -1,64 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Filme {Jose Liedson da Silva}</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
         <h1>Mulholland Drive</h1>
-        <figure> 
-            <img src="poster.webp" alt="Poster do filme Mulholland Drive" width="100">
+        <figure>
+            <img src="poster.webp" alt="Poster do filme Mulholland Drive">
         </figure>
     </header>
 
     <nav>
         <ul>
             <li><a href="#sinopse">Sinopse</a></li>
-            <li><a href="#elenco">Elenco</a></li>
             <li><a href="#trailer">Trailer</a></li>
+            <li><a href="#elenco">Elenco</a></li>
         </ul>
     </nav>
 
     <main>
 
-        <article>
+        <section id="sinopse">
+            <h2>Sinopse</h2>
+            <p>
+                Uma jovem atriz viaja para Hollywood e se vê emaranhada numa
+                intriga secreta com uma mulher que escapou por pouco de ser assassinada,
+                e que agora se encontra com amnésia devido a um acidente de carro.
+            </p>
+        </section>
 
-            <section id="sinopse">
-                <h2>Sinopse</h2>
-                <p>
-                    Uma jovem atriz viaja para Hollywood e se vê emaranhada numa
-                    intriga secreta com uma mulher que escapou por pouco de ser assassinada,
-                    e que agora se encontra com amnésia devido a um acidente de carro.
-                </p>
-            </section>
+        <section id="trailer">
+            <h2>Trailer</h2>
+            <p>Assista ao trailer:</p>
+            <video controls poster="Trailer/trailer-poster.jpg" width="640">
+                <source src="Trailer/trailer-mp4.mp4" type="video/mp4">
+                <source src="Trailer/trailer-webm.webm" type="video/webm">
+                <track src="Trailer/trailer-legenda.vtt" kind="subtitles" srclang="en" label="English" default>
+                <p>Este navegador não oferece suporte a vídeos em HTML5</p>
+            </video>
+        </section>
 
-            <section id="elenco">
-                <h2>Elenco</h2>
-                <ul>
-                    <li>Naomi Watts</li>
-                    <li>Laura Harring</li>
-                    <li>Justin Theroux</li>
-                </ul>
-            </section>
+        <section id="elenco">
+            <h2>Elenco</h2>
+            <ul>
+                <li>Naomi Watts</li>
+                <li>Laura Harring</li>
+                <li>Justin Theroux</li>
+            </ul>
+        </section>
 
-            <section id="trailer">
-                <h2>Trailer</h2>
-                <p>Assista ao trailer:</p>
-                <video controls poster="Trailer/trailer-poster.jpg" width="640">
-                    <source src="Trailer/trailer-mp4.mp4" type="video/mp4">
-                    <source src="Trailer/trailer-webm.webm" type="video/webm">
-                    <track src="Trailer/trailer-legenda.vtt" kind="subtitles" srclang="en" label="English" default>
-                    <p>Este navegador não oferece suporte a vídeos em HTML5</p>
-                </video>
-            </section>
+        <section id="avaliacao">
+            <h2>Avalie o Filme</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Deixe sua avaliação</legend>
 
-        </article>
+                    <!-- Nota -->
+                    <label for="nota">Nota (1 a 5):</label><br>
+                    <input type="number" id="nota" name="nota" min="1" max="5" required
+                        title="Escolha uma nota entre 1 e 5"><br><br>
+
+                    <!-- Comentário -->
+                    <label for="comentario">Comentário:</label><br>
+                    <textarea id="comentario" name="comentario" rows="4" required minlength="5"
+                        placeholder="Escreva sua opinião sobre o filme..."
+                        title="O comentário deve ter pelo menos 5 caracteres"></textarea><br><br>
+
+                    <button type="submit">Enviar Avaliação</button>
+                </fieldset>
+            </form>
+        </section>
 
         <aside>
             <h3>Curiosidades</h3>
-            <p>O filme foi dirigido por David Lynch e lançado em 2001. Inicialmente foi planejado como episódio piloto de uma série de TV, mas foi rejeitado pela emissora. Depois, o diretor transformou o projeto em um longa-metragem.</p>
+            <p>O filme foi dirigido por David Lynch e lançado em 2001. Inicialmente foi planejado como episódio piloto
+                de uma série de TV, mas foi rejeitado pela emissora. Depois, o diretor transformou o projeto em um
+                longa-metragem.</p>
         </aside>
 
     </main>
